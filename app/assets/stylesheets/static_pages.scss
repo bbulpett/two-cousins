@@ -25,15 +25,17 @@ main {
 }
 
 h1, h2 {
-	text-align: center;
 	text-transform: uppercase;
   background: -webkit-linear-gradient(#1A0D00, #804000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 h1 {
-	padding: 100px 10px 10px;
+	padding: 100px 10px 0;
 	font-size: 48pt;
 	min-width: 805px;
 }
@@ -41,9 +43,16 @@ h1 {
 h2 {
 	font-weight: 400;
 	font-size: 28pt;
+	background: url("coming-soon.png") 0 0 no-repeat;
+	width: 375px;
 }
 
 footer {
 	text-align: center;
-	margin-top: 200px;
+	margin-top: 150px;
+}
+
+#brand-icons, h1, h2 {
+	display: block;
+	margin: 0 auto;
 }
