@@ -1,0 +1,49 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Kanit:400,900);
+$brand-font: 'Open Sans', sans-serif;
+
+body {
+	background: #7E4F2F;
+	font-family: 'Kanit', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	width: 980px;
+	height: 680px;
+	margin: 0 auto;
+	background: url(main-bg.jpg) #DD9561;
+	background-repeat: no-repeat;
+  border: 1px solid #67351a;
+  -moz-box-shadow: 4px 5px 5px 5px #3A1708;
+  -webkit-box-shadow: 4px 5px 5px 5px #3A1708;
+  -webkit-border-bottom-right-radius: 15px;
+}
+
+h1, h2 {
+	text-align: center;
+	text-transform: uppercase;
+  background: -webkit-linear-gradient(#1A0D00, #804000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+	padding: 100px 10px 10px;
+	font-size: 48pt;
+	min-width: 805px;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 28pt;
+}
+
+footer {
+	text-align: center;
+	margin-top: 200px;
+}
