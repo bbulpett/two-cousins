@@ -10,6 +10,7 @@ body {
 	font-family: 'Kanit', sans-serif;
 	margin: 0;
 	padding: 0;
+	color: #340E0A;
 }
 
 main {
@@ -26,21 +27,14 @@ main {
 
 h1, h2 {
 	text-transform: uppercase;
-  background: -webkit-linear-gradient(#1A0D00, #804000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 	white-space: nowrap;
 	overflow: hidden;
 }
 
 h1 {
 	text-align: center;
-	color: #1A0D00;
 	padding: 120px 10px 0;
 	font-size: 44pt;
-	background: -webkit-linear-gradient(#0A0D00, #804000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 h2 {
