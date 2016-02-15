@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Kanit:400,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$brand-font: 'Kanit', sans-serif;
+
+body {
+	background: #7E4F2F;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #340E0A;
+}
+
+main {
+	width: 980px;
+	height: 680px;
+	margin: 0 auto;
+	background: url(main-bg.jpg) #DD9561;
+	background-repeat: no-repeat;
+  border: 1px solid #67351a;
+  -moz-box-shadow: 4px 5px 5px 5px #3A1708;
+  -webkit-box-shadow: 4px 5px 5px 5px #3A1708;
+  -webkit-border-bottom-right-radius: 15px;
+}
+
+h1, h2 {
+	font-family: $brand-font;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+h1 {
+	padding: 120px 10px 0;
+	font-size: 44pt;
+	font-weight: 900;
+}
+
+h2 {
+  text-indent: 100%;
+	font-weight: 400;
+	font-size: 28pt;
+	background: url("coming-soon.png") 0 0 no-repeat;
+	width: 375px;
+}
+
+h3 {
+	font-weight: 800;
+	font-size: 16pt;
+}
+
+footer {
+	margin-top: 150px;
+}
+
+#brand-icons, h1, h2 {
+	display: block;
+	margin: 0 auto;
+}
+
+h1, footer, #subscribe {
+	text-align: center;
+}
+
+#subscribe {
+	margin: 50px auto 25px;
+
+	input {
+		text-align: center;
+		border: 4px solid #340E0A;
+	}
+
+	.btn {
+		background: #340E0A;
+		border: 2px solid #000;
+		color: #EEE;
+		font-weight: 800;
+	}
+}
+
+.glyphicon {
+	position:relative;
+	font-size: 28pt;
+	padding-right: 2px;
+	top: 15px;
+}
