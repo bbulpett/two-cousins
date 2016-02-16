@@ -19,86 +19,173 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit:400,900);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-$brand-font: 'Kanit', sans-serif;
+$brand-font-family: 'Kanit', sans-serif;
+$body-font-family: 'Open Sans', sans-serif;
 
-body {
-	background: #7E4F2F;
-	font-family: 'Open Sans', sans-serif;
-	margin: 0;
-	padding: 0;
-	color: #340E0A;
-}
+/*** RESPONSIVE BREAKPOINTS ***/
+$breakpoint-widescreen: 1200px;
+$breakpoint-desktop: 992px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
+$breakpoint-custom-iPhoneRetina: 320px;
 
-main {
-	width: 980px;
-	height: 680px;
-	margin: 0 auto;
-	background: url(main-bg.jpg) #DD9561;
-	background-repeat: no-repeat;
-  border: 1px solid #67351a;
-  -moz-box-shadow: 4px 5px 5px 5px #3A1708;
-  -webkit-box-shadow: 4px 5px 5px 5px #3A1708;
-  -webkit-border-bottom-right-radius: 15px;
-}
+/*** MEDIA QUERIES ***/
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : $breakpoint-custom-iPhoneRetina) {
+	html, body, main {
+			height: 100%;
+		}
 
-h1, h2 {
-	font-family: $brand-font;
-	text-transform: uppercase;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-h1 {
-	padding: 120px 10px 0;
-	font-size: 44pt;
-	font-weight: 900;
-}
-
-h2 {
-  text-indent: 100%;
-	font-weight: 400;
-	font-size: 28pt;
-	background: url("coming-soon.png") 0 0 no-repeat;
-	width: 375px;
-}
-
-h3 {
-	font-weight: 800;
-	font-size: 16pt;
-}
-
-footer {
-	margin-top: 150px;
-}
-
-#brand-icons, h1, h2 {
-	display: block;
-	margin: 0 auto;
-}
-
-h1, footer, #subscribe {
-	text-align: center;
-}
-
-#subscribe {
-	margin: 50px auto 25px;
-
-	input {
-		text-align: center;
-		border: 4px solid #340E0A;
+	body {
+		background: #7E4F2F;
+		font-family: $body-font-family;
+		margin: 0;
+		padding: 0;
+		color: #340E0A;
 	}
 
-	.btn {
-		background: #340E0A;
-		border: 2px solid #000;
-		color: #EEE;
+	main {
+		width: 100%;
+		min-height: 100%;
+		height: auto !important;
+		background: url(main-bg-medium.jpg) #DD9561;
+	}
+
+	h1, h2 {
+		font-family: $brand-font-family;
+		text-transform: uppercase;
+		overflow: hidden;
+	}
+
+	h1 {
+		max-width: 90%;
+		font-size: 32px;
+		font-weight: 900;
+		padding: 60px 15px 30px;
+	}
+
+	h2 {
+	  text-indent: 100%;
+		font-weight: 400;
+		font-size: 28pt;
+		background: url("coming-soon.png") center 0 no-repeat;
+		width: 300px;
+		white-space: nowrap;
+	}
+
+	h3 {
 		font-weight: 800;
+		font-size: 16pt;
+	}
+
+	form {
+		width: 280px;
+		margin: 0 auto;
+
+		input.form-control {
+		width: 240px; 
+		margin: 0 auto;
+	}
+	}
+
+	footer {
+		margin: 150px 0 0;
+		height: 25px;
+	}
+
+	#brand-icons, h1, h2 {
+		display: block;
+		margin: 0 auto;
+	}
+
+	#brand-icons {
+		max-width: 280px;
+	}
+
+	h1, footer, #subscribe {
+		text-align: center;
+	}
+
+	#subscribe {
+		margin: 50px auto 25px;
+
+		input {
+			text-align: center;
+			border: 4px solid #340E0A;
+		}
+
+		.btn {
+			margin-top: 20px;
+			background: #340E0A;
+			border: 2px solid #000;
+			color: #EEE;
+			font-weight: 800;
+		}
+	}
+
+	.glyphicon-envelope {
+		position:relative;
+		font-size: 28pt;
+		float: left;
+		top: -1px;
 	}
 }
 
-.glyphicon {
-	position:relative;
-	font-size: 28pt;
-	padding-right: 2px;
-	top: 15px;
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : $breakpoint-phone) {
+	h1 {
+		font-size: 40pt;
+		padding: 120px 10px 0;
+	}
+
+	h2 {
+		width: 375px;
+		background: url("coming-soon.png") 0 0 no-repeat;
+	}
+
+	h1, h2 {
+		white-space: nowrap;
+	}
+
+	form {
+		width: 410px;
+
+		input.form-control {
+			width: 320px; 
+		}
+	}
+
+	.glyphicon-envelope {
+		margin-right: -40px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : $breakpoint-tablet) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : $breakpoint-desktop) {
+		
+	main {
+		width: 980px;
+		height: 680px;
+		min-height: 0;
+		margin: 0 auto;
+		background: url(main-bg.jpg) #DD9561;
+		background-repeat: no-repeat;
+	  border: 1px solid #67351a;
+	  -moz-box-shadow: 4px 5px 5px 5px #3A1708;
+	  -webkit-box-shadow: 4px 5px 5px 5px #3A1708;
+	  -webkit-border-bottom-right-radius: 15px;
+	}
+
+	h1 {
+		font-size: 44pt;
+	}
+
+	.glyphicon-envelope {
+		padding-right: 2px;
+	}
 }

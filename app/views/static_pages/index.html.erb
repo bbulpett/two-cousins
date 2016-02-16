@@ -10,7 +10,7 @@
 		<br>
 		<%= bootstrap_form_tag url: "/index", layout: :inline do |f| %>
 			<span class="glyphicon glyphicon-envelope"></span>
-			<%= f.email_field :email, hide_label: true, placeholder: "you@example.com", style:"width: 320px; margin: 0 auto;", autofocus: true %>
+			<%= f.email_field :email, hide_label: true, placeholder: "you@example.com", autofocus: true %>
 			<%= f.form_group do %>
 				<%= f.submit "Subscribe" %>
 			<% end %>
